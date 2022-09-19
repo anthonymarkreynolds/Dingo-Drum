@@ -8,7 +8,7 @@ export const Frame = styled.button`
     overflow: hidden;
     position: relative;
     border-radius: 3px;
-    border: 1px solid rgb(135, 135, 135);
+    border: 5px solid rgb(135, 135, 135);
     background-color: #ffffff;
 `
 

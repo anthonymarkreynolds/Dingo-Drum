@@ -29,6 +29,8 @@ export default function AnimalPads() {
       case "wolf":
         new Audio('AnimalDrum/wolf.mp3').play();
         break
+        default:
+          break
     }
   }
 
@@ -54,6 +56,8 @@ export default function AnimalPads() {
         case 'h':
             soundSelector('wolf')
             break
+            default:
+          break
     }
 });
 

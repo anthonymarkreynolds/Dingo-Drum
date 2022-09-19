@@ -32,7 +32,8 @@ export default function ClassicDrumPads() {
       case "tom3":
         new Audio('ClassicDrum/tom-3.mp3').play();
         break
-
+        default:
+          break
     }
   }
 
@@ -58,6 +59,8 @@ export default function ClassicDrumPads() {
         case 'h':
             soundSelector('tom3')
             break
+        default:
+          break
     }
 });
 
