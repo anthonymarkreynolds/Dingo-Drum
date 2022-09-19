@@ -2,6 +2,9 @@ import React from 'react'
 import {Frame} from './styled'
 
 export default function AnimalPads() {
+
+  const componentsOfClassicDrumPads = ["kick", "snare", "crash", "tom1", "tom2", "tom3"] 
+
     const playSound = (e) => {
         e.preventDefault()
 
@@ -10,13 +13,11 @@ export default function AnimalPads() {
     return (
     
         <div className="frameContainer">
-            <Frame onClick={playSound}></Frame>
-            <Frame onClick={playSound}></Frame>
-            <Frame onClick={playSound}></Frame>
-            <Frame onClick={playSound}></Frame>
-            <Frame onClick={playSound}></Frame>
-            <Frame onClick={playSound}></Frame>
-            <Frame onClick={playSound}></Frame>
+     {componentsOfClassicDrumPads.map((component, index) => {
+            return (
+                <Frame key={index} onClick={playSound} value={component} >animal</Frame>
+            )
+        })}
         </div>
     
   )

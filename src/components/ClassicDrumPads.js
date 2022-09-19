@@ -1,20 +1,21 @@
 import React from 'react'
-import {Frame, Img} from './styled'
+import {Frame} from './styled'
 
 
 export default function ClassicDrumPads() {
   
-  const componentsOfClassicDrumPads = ["kick", "snare", "crash", "tom1", "tom2", "tom3", "tom4"] 
+  const componentsOfClassicDrumPads = ["kick", "snare", "crash", "tom1", "tom2", "tom3"] 
   
   const playSound = (e) => {
-    // console.log(e.target.alt)
-    soundSelector(e.target.alt)
+    
+    soundSelector(e.target.value)
 
   }
 
   const soundSelector= (key) => {
     switch(key){
       case "kick":
+        
         new Audio('kits/ClassicDrum/kick-bass.wav').play();
         break
       case "snare":
@@ -32,9 +33,7 @@ export default function ClassicDrumPads() {
       case "tom3":
         new Audio('kits/ClassicDrum/tom-3.wav').play();
         break
-      case "tom4":
-        new Audio('kits/ClassicDrum/tom-4.wav').play();
-        break
+
     }
   }
 
@@ -60,9 +59,7 @@ export default function ClassicDrumPads() {
         case 'h':
             soundSelector('tom3')
             break
-        case 'j':
-            soundSelector('tom4')
-            break
+
     }
 });
 
@@ -71,7 +68,7 @@ export default function ClassicDrumPads() {
     <div className="frameContainer">
      {componentsOfClassicDrumPads.map((component, index) => {
             return (
-                <Frame key={index} onClick={playSound}><Img src={'/drum_components/' + component + '.png'} alt={component} /></Frame>
+                <Frame key={index} onClick={playSound} value={component} >classic</Frame>
             )
         })}
     </div>
