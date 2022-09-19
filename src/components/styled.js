@@ -12,7 +12,7 @@ export const Frame = styled.button`
     background-color: #ffffff;
 `
 
-export const Btn = styled.button`
+export const Btn = styled.a`
     width: 200px;
     height: 35px;
     text-align: center;
