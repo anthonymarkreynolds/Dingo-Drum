@@ -18,15 +18,17 @@ function App() {
       <h1>Dingo Drum</h1>
 
       <div className="btn-group">
+        <Link to="/About" ><Btn>About</Btn></Link>&nbsp;
         <Link to="/ClassicDrumPads" ><Btn>Classic Drum</Btn></Link>&nbsp;
         <Link to="/AnimalPads"><Btn>Animal Drum</Btn></Link>
       </div>
       <Routes>
+        <Route path="/About" element={<About />}/>
         <Route path="/ClassicDrumPads" element={<ClassicDrumPads />}/>
         <Route path="/AnimalPads" element={<AnimalPads />}/>
         <Route path='/' element={<Navigate to='/ClassicDrumPads'/>}/>
       </Routes>
-    <About />
+    
       
     </div>
   );
