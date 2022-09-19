@@ -10,7 +10,7 @@ export default function AnimalPads() {
     return (
     
         <div className="frameContainer">
-            <Frame className="animalPads" onClick={playSound}></Frame>
+            <Frame onClick={playSound}></Frame>
             <Frame onClick={playSound}></Frame>
             <Frame onClick={playSound}></Frame>
             <Frame onClick={playSound}></Frame>

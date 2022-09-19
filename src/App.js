@@ -12,6 +12,9 @@ import ClassicDrumPads from './components/ClassicDrumPads';
 import {Btn} from './components/styled'
 
 function App() {
+
+
+
   return (
     <div className="App">
       <h1>Dingo Drum</h1>
@@ -24,9 +27,7 @@ function App() {
         <Route path="/ClassicDrumPads" element={<ClassicDrumPads />}/>
         <Route path="/AnimalPads" element={<AnimalPads />}/>
         <Route path='/' element={<Navigate to='/ClassicDrumPads'/>}/>
-      </Routes>
-
-      
+      </Routes>      
     </div>
   );
 }

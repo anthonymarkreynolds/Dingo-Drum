@@ -1,23 +1,79 @@
 import React from 'react'
-import {Frame} from './styled'
+import {Frame, Img} from './styled'
 
 
 export default function ClassicDrumPads() {
+  
+  const componentsOfClassicDrumPads = ["kick", "snare", "crash", "tom1", "tom2", "tom3", "tom4"] 
+  
   const playSound = (e) => {
-    e.preventDefault()
+    // console.log(e.target.alt)
+    soundSelector(e.target.alt)
 
   }
+
+  const soundSelector= (key) => {
+    switch(key){
+      case "kick":
+        new Audio('kits/ClassicDrum/kick-bass.wav').play();
+        break
+      case "snare":
+        new Audio('kits/ClassicDrum/snare.wav').play();
+        break
+      case "crash":
+        new Audio('kits/ClassicDrum/crash.wav').play();
+        break
+      case "tom1":
+        new Audio('kits/ClassicDrum/tom-1.wav').play();
+        break
+      case "tom2":
+        new Audio('kits/ClassicDrum/tom-2.wav').play();
+        break
+      case "tom3":
+        new Audio('kits/ClassicDrum/tom-3.wav').play();
+        break
+      case "tom4":
+        new Audio('kits/ClassicDrum/tom-4.wav').play();
+        break
+    }
+  }
+
+  document.addEventListener("keydown", (e) => {
+    e.stopImmediatePropagation();
+    // console.log(e.key)
+    switch(e.key) {
+        case 'a':
+            soundSelector('kick')
+            break
+        case 's':
+            soundSelector('snare')
+            break
+        case 'd':
+            soundSelector('crash')
+            break
+        case 'f':
+            soundSelector('tom1')
+            break
+        case 'g':
+            soundSelector('tom2')
+            break
+        case 'h':
+            soundSelector('tom3')
+            break
+        case 'j':
+            soundSelector('tom4')
+            break
+    }
+});
 
 
   return (
     <div className="frameContainer">
-    <Frame className="animalPads" onClick={playSound}></Frame>
-    <Frame onClick={playSound}></Frame>
-    <Frame onClick={playSound}></Frame>
-    <Frame onClick={playSound}></Frame>
-    <Frame onClick={playSound}></Frame>
-    <Frame onClick={playSound}></Frame>
-    <Frame onClick={playSound}></Frame>
-</div>
+     {componentsOfClassicDrumPads.map((component, index) => {
+            return (
+                <Frame key={index} onClick={playSound}><Img src={'/drum_components/' + component + '.png'} alt={component} /></Frame>
+            )
+        })}
+    </div>
   )
 }
