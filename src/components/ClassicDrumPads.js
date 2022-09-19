@@ -9,29 +9,28 @@ export default function ClassicDrumPads() {
   const playSound = (e) => {
     
     soundSelector(e.target.value)
-
   }
+
 
   const soundSelector= (key) => {
     switch(key){
       case "kick":
-        
-        new Audio('kits/ClassicDrum/kick-bass.wav').play();
+        new Audio('ClassicDrum/kick-bass.mp3').play();
         break
       case "snare":
-        new Audio('kits/ClassicDrum/snare.wav').play();
+        new Audio('ClassicDrum/snare.mp3').play();
         break
       case "crash":
-        new Audio('kits/ClassicDrum/crash.wav').play();
+        new Audio('ClassicDrum/crash.mp3').play();
         break
       case "tom1":
-        new Audio('kits/ClassicDrum/tom-1.wav').play();
+        new Audio('ClassicDrum/tom-1.mp3').play();
         break
       case "tom2":
-        new Audio('kits/ClassicDrum/tom-2.wav').play();
+        new Audio('ClassicDrum/tom-2.mp3').play();
         break
       case "tom3":
-        new Audio('kits/ClassicDrum/tom-3.wav').play();
+        new Audio('ClassicDrum/tom-3.mp3').play();
         break
 
     }
@@ -59,7 +58,6 @@ export default function ClassicDrumPads() {
         case 'h':
             soundSelector('tom3')
             break
-
     }
 });
 

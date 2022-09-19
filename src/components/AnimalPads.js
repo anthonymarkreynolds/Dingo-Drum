@@ -3,13 +3,63 @@ import {Frame} from './styled'
 
 export default function AnimalPads() {
 
-  const componentsOfClassicDrumPads = ["kick", "snare", "crash", "tom1", "tom2", "tom3"] 
+  const componentsOfClassicDrumPads = ["bird", "dog", "frog", "kitty", "squirrel", "wolf"] 
 
-    const playSound = (e) => {
-        e.preventDefault()
+  const playSound = (e) => {
+    
+    soundSelector(e.target.value)
+  }
+  const soundSelector= (key) => {
+    switch(key){
+      case "bird":
+        new Audio('AnimalDrum/bird.mp3').play();
+        break
+      case "dog":
+        new Audio('AnimalDrum/dog.mp3').play();
+        break
+      case "frog":
+        new Audio('AnimalDrum/frog.mp3').play();
+        break
+      case "kitty":
+        new Audio('AnimalDrum/kitty.mp3').play();
+        break
+      case "squirrel":
+        new Audio('AnimalDrum/squirrel.mp3').play();
+        break
+      case "wolf":
+        new Audio('AnimalDrum/wolf.mp3').play();
+        break
+    }
+  }
 
-      }
-  
+  document.addEventListener("keydown", (e) => {
+    e.stopImmediatePropagation();
+    // console.log(e.key)
+    switch(e.key) {
+        case 'a':
+            soundSelector('bird')
+            break
+        case 's':
+            soundSelector('dog')
+            break
+        case 'd':
+            soundSelector('frog')
+            break
+        case 'f':
+            soundSelector('kitty')
+            break
+        case 'g':
+            soundSelector('squirrel')
+            break
+        case 'h':
+            soundSelector('wolf')
+            break
+    }
+});
+
+
+
+
     return (
     
         <div className="frameContainer">
