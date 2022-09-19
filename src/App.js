@@ -10,6 +10,7 @@ import './App.css';
 import AnimalPads from './components/AnimalPads'
 import ClassicDrumPads from './components/ClassicDrumPads';
 import {Btn} from './components/styled'
+import About from './components/About';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path="/AnimalPads" element={<AnimalPads />}/>
         <Route path='/' element={<Navigate to='/ClassicDrumPads'/>}/>
       </Routes>
-
+    <About />
       
     </div>
   );
