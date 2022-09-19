@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React from 'react'
+import {
+  Routes,
+  Route,
+  Link,
+  Navigate
+} from "react-router-dom";
 import './App.css';
+
+import AnimalPads from './components/AnimalPads'
+import ClassicDrumPads from './components/ClassicDrumPads';
+import {Btn} from './components/styled'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Dingo Drum</h1>
+
+      <div className="btn-group">
+        <Link to="/ClassicDrumPads" ><Btn>Classic Drum</Btn></Link>&nbsp;
+        <Link to="/AnimalPads"><Btn>Animal Drum</Btn></Link>
+      </div>
+      <Routes>
+        <Route path="/ClassicDrumPads" element={<ClassicDrumPads />}/>
+        <Route path="/AnimalPads" element={<AnimalPads />}/>
+        <Route path='/' element={<Navigate to='/ClassicDrumPads'/>}/>
+      </Routes>
+
+      
     </div>
   );
 }
