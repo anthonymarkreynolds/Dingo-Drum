@@ -1,11 +1,13 @@
 import React from 'react'
-import {Frame} from './styled'
+import {Frame, Img} from './styled'
 import kickBass from '../ClassicDrum/kick-bass.mp3'
 import snare from '../ClassicDrum/snare.mp3'
 import crash from '../ClassicDrum/crash.mp3'
-import tom1 from '../ClassicDrum/crash.mp3'
-import tom2 from '../ClassicDrum/crash.mp3'
-import tom3 from '../ClassicDrum/crash.mp3'
+import tom1 from '../ClassicDrum/tom-1.mp3'
+import tom2 from '../ClassicDrum/tom-2.mp3'
+import tom3 from '../ClassicDrum/tom-3.mp3'
+
+
 
 
 export default function ClassicDrumPads() {
@@ -14,7 +16,7 @@ export default function ClassicDrumPads() {
   
   const playSound = (e) => {
     console.log(e.target.value)
-    soundSelector(e.target.value)
+    soundSelector(e.target.alt)
   }
 
 
@@ -70,12 +72,11 @@ export default function ClassicDrumPads() {
     }
 });
 
-
   return (
     <div className="frameContainer">
      {componentsOfClassicDrumPads.map((component, index) => {
             return (
-                <Frame key={index} onClick={playSound} value={component} >classic</Frame>
+                <Frame key={index}  value={component} ><Img onClick={playSound} src={process.env.PUBLIC_URL + '/' + component + '.png'} alt={component} /></Frame>
             )
         })}
     </div>
