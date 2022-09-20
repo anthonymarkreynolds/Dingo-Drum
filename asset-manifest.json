@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Dingo-Drum/static/css/main.f9ac1bed.css",
-    "main.js": "/Dingo-Drum/static/js/main.10f99d87.js",
+    "main.js": "/Dingo-Drum/static/js/main.41fd068d.js",
     "static/js/787.432a0cc9.chunk.js": "/Dingo-Drum/static/js/787.432a0cc9.chunk.js",
     "static/media/Cym_Tek_AHeat_002.mp3": "/Dingo-Drum/static/media/Cym_Tek_AHeat_002.b326a09bbb4e88b0bf10.mp3",
     "static/media/wolf.mp3": "/Dingo-Drum/static/media/wolf.0c346d3de544031a5da8.mp3",
@@ -23,11 +23,11 @@
     "static/media/kick-bass.mp3": "/Dingo-Drum/static/media/kick-bass.bbc2c60ca9b3bdf00884.mp3",
     "index.html": "/Dingo-Drum/index.html",
     "main.f9ac1bed.css.map": "/Dingo-Drum/static/css/main.f9ac1bed.css.map",
-    "main.10f99d87.js.map": "/Dingo-Drum/static/js/main.10f99d87.js.map",
+    "main.41fd068d.js.map": "/Dingo-Drum/static/js/main.41fd068d.js.map",
     "787.432a0cc9.chunk.js.map": "/Dingo-Drum/static/js/787.432a0cc9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f9ac1bed.css",
-    "static/js/main.10f99d87.js"
+    "static/js/main.41fd068d.js"
   ]
 }
