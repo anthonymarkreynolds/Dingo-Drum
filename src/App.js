@@ -29,9 +29,9 @@ function App() {
 
         <div className="btn-group">
 
-          <Link to="/AnaloguePads">
+          {/* <Link to="/AnaloguePads">
             <button style={{width: '200px', height: '35px'}} >Analogue Kit</button>
-          </Link>
+          </Link> */}
 
         </div>
         <Routes>
