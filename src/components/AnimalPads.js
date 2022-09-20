@@ -68,12 +68,23 @@ export default function AnimalPads() {
           break
     }
 });
+
+
+    const emojis = {
+      "bird": "🐦",
+      "dog": "🐶",
+      "frog": "🐸",
+      "kitty": "😽", 
+      "squirrel": "🐿️", 
+      "wolf": "🐺"
+    }
+
     return (
     
         <div className="frameContainer">
      {animals.map((component, index) => {
             return (
-                <Frame key={index} onClick={playSound} value={component} >animal</Frame>
+                <Frame key={index} onClick={playSound} value={component} style={{fontSize: "60px"}}>{emojis[component]}</Frame>
             )
         })}
         </div>
