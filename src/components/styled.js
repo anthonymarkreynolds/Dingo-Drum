@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Frame = styled.div`
+export const Frame = styled.button`
     width:100px;
     height:100px;
     display: inline-block;
@@ -11,11 +11,8 @@ export const Frame = styled.div`
     border: 5px solid rgb(135, 135, 135);
     background-color: #ffffff;
 `
-export const Img = styled.img`
-    max-width: 100px;
-    
-`
-export const Btn = styled.button`
+
+export const Btn = styled.a`
     width: 200px;
     height: 35px;
     text-align: center;
